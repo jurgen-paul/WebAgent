@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>WebWalker</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <style>
+    .findings-box {
+      border: 2px solid #d0d9e0;
+      border-radius: 8px;
+      padding: 10px 15px;
+      display: inline-block;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #f9f9f9;
+    }
+
+    .findings-box .title {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 18px;
+    }
+
+    .findings-box .content {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <img src="static/images/overall.jpg" width="30%">
+            <h1 class="title is-2 publication-title">WebWalker: Benchmarking LLMs in Web Traversal</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"><a herf="https://callanwu.github.io/">Jialong Wu</a>,</span>
+              <span class="author-block">Wenbiao Yin,</span>
+              <span class="author-block">Yong Jiang<sup>&dagger;</sup>,</span>
+              <span class="author-block">Zhenglin Wang,</span>
+              <span class="author-block">Zekun Xi,</span>
+              <span class="author-block">Runnan Fang,</span>
+              <br>
+              <span class="author-block">Deyu Zhou<sup>&dagger;</sup>,</span>
+              <span class="author-block">Pengjun Xie,</span>
+              <span class="author-block">Fei Huang</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              jialongwu@{alibaba-inc.com, seu.edu.cn}
+              <br>
+              <span class="author-block"><b>Tongyi Lab <img src="static/images/tongyi.jpg" alt="Tongyi Logo" style="width: 20px; height: 20px;"/>
+                , Alibaba Group.</b></span>
+            </div>
+
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2406.18532.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Alibaba-nlp/WebWalker" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/callanwu/WebWalkerQA" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img src="static/images/hf-logo.png" alt="Hugging Face Logo" style="width: 20px; height: 20px;"/>
+                  </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+
+                  <span class="link-block">
+                      <a href="https://huggingface.co/spaces/callanwu/WebWalkerQALeadeboard" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <img src="static/images/leaderboard.png" alt="leaderboard Logo" style="width: 20px; height: 25px;"/>
+                      </span>
+                        <span>Leaderboard</span>
+                      </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://www.modelscope.cn/studios/iic/WebWalker" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="far fa-gem"></i>
+                      </span>
+                      <span>Demo</span>
+                      </a>
+                     
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/images/demo.mp4"
+                  type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">A demo of WebWalker. You can explore it <a href="https://www.modelscope.cn/studios/iic/WebWalker" target="_blank">here</a>.</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Retrieval-augmented generation (RAG) demonstrates remarkable performance across tasks in open-domain question-answering.
+              However, traditional search engines may retrieve shallow content, limiting the ability of LLMs to handle complex, multi-layered information.
+              To address it, we introduce <b>WebWalkerQA</b>, a benchmark designed to assess the ability of LLMs to perform web traversal.
+              It evaluates the capacity of LLMs to traverse a website's subpages to extract high-quality data systematically. 
+              We propose <b>WebWalker</b>, which is a multi-agent framework that mimics human-like web navigation through an explore-critic paradigm.
+              Extensive experimental results show that WebWalkerQA is challenging and demonstrates the effectiveness of RAG combined with WebWalker, through the horizontal and vertical integration in real-world scenarios.
+            </p>
+          </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Overview -->
+  <section class="section" id="Overview">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">🌟Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              📚 We construct a challenging benchmark, <b>WebWalkerQA</b>, which is composed of 680 queries from four real-world scenarios across over 1373 webpages.
+            </p>
+            <p>
+              🤖 To tackle the challenge of web-navigation tasks requiring long context, we propose <b>WebWalker</b>, which utilizes a multi-agent framework for effective memory management.
+            </p>
+            <p>
+              📊 Extensive experiments show that the WebWalkerQA is challenging, and for informationseeking tasks, <b>vertical exploration</b> within the page proves to be beneficial.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+<div class="content has-text-justified">
+  <!-- Framework -->
+  <section class="section" id="Framework">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">📚WebWalkerQA</h2>
+          <img src="static/images/dataset.jpg" width="80%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Data Collection.</b> To make the annotation process cost-efficient and
+              accurate, we employ a two-stage funnel annotation
+              strategy, combining LLM-based and human annotation. In the first stage, GPT-4o,
+              performs initial annotations, followed by a second
+              stage, where crowd-sourced human annotators conduct quality control and filtering to refine the final
+              results. 
+            </p>
+          </div>
+          <img src="static/images/sta.jpg" width="80%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Data Statistics.</b> Through such data construction method with LLM
+              and human participation, we obtain 680 questionanswer pairs for WebWalkerQA.
+              WebWalkerQA contains two types of data: multi-source and single-source QAs.
+              We categorize the questions
+              into three difficulty levels: easy, medium,
+              and hard, based on the value of i, which denotes the depth of the corresponding subpage.
+              WebWalkerQA encompasses four realworld domains: conference, organization, education, and game according is a bilingual dataset
+              that includes both Chinese and English.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Overview -->
+  <!-- Framework -->
+  <section class="section" id="Framework">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">🤖WebWalker</h2>
+          <img src="static/images/method.jpg" width="80%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Think then Explore.</b> The explorer agent navigates through a web environment step by step. It interacts with the webpage, focusing on HTML buttons and clickable links to decide where to go next. At each step, the agent observes the current page, which includes the page content and a list of clickable links. Based on this observation, it chooses a link to explore further. The decision-making process considers the sequence of all previous actions and observations, forming a "history" that helps guide the exploration. This process continues until the critic agent decides that enough information has been gathered or a pre-set limit on exploration steps is reached.
+            </p>
+            <p>
+              <b>Think then Critique.</b> The critic agent steps in to assess the progress made by the explorer agent. After each exploration step, the critic evaluates the current state, including the query, the latest page observation, and the chosen action. It maintains a memory that is updated incrementally with relevant information gathered so far. The critic decides whether the information collected is sufficient to answer the query. If it is, the critic formulates and provides an answer. If not, the exploration continues. This iterative process ensures that the exploration is purposeful and focused on gathering the necessary information to resolve the query.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Framework -->
+
+  <!-- Experiments -->
+  <section class="section" id="Experiments">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">📊Experiments</h2>
+          <div class="content has-text-justified">
+          </div>
+          <img src="static/images/agent_result.jpg" width="70%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Results on Agents.</b> The closed-source models outperform
+              the open-source models in both performance and efficiency. For open-source models, performance
+              and efficiency improves as the model size increases.
+              Our proposed WebWalker framework outperforms
+              Reflexion, which in turn outperforms React. We
+              only counted the action count (A.C.) from correct
+              executions, and as the model size increases, the A.C.
+              grows, indicating that larger LLMs have enhanced
+              long-range information-seeking ability. Even the
+              best-performing WebWalker using GPT-4o as its
+              backbone does not surpass 40%, highlighting the
+              challenge posed by WebWalkerQA.
+            </p>
+          </div>
+          <img src="static/images/detail.jpg" width="80%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Further Analysis.</b> 
+              The further towards
+              the top-right corner, the more effective and prolonged the web traversal becomes. We observe that
+              increasing the model size or introducing reflection
+              on the process of each action can address certain
+              problems requiring multi-step solutions, thereby
+              enabling long-distance task-solving capabilities in
+              web traversal tasks. 
+              The
+              model with a relatively small number of parameters using the ReAct framework lacks the capacity to explore the depth of information, making
+              judgments within just a few iterations of taking
+              action, regardless of whether relevant information
+              has been found. It tends to “give up” and exhibits
+              characteristics of impatience. Introducing memory
+              to manage the long context, along with an increase
+              in model parameters, provides evidence that this
+              phenomenon stems from the interference of long
+              contexts having noisy information and the inherent
+              capabilities of the model itself
+            </p>
+          </div>
+          <img src="static/images/rag_result.jpg" width="60%">
+          <div class="content has-text-justified">
+            <p>
+              <b>Result on RAG System.</b> We first evaluate the performance under Close
+              Book settings using the state-of-the-art model OpenAI o1 and Gemini-1.5-Pro without retrieval. We then access the performance of
+              several commercial and open-sourced RAG systems.
+              Both commercial and open-sourced RAG systems exhibit relatively poor performance on WebWalkerQA, with
+              the best result coming from Tongyi, which only
+              reaches 40%.
+            </p>
+          </div>
+          <div class="findings-box">
+            <span class="title">Findings (i):</span>
+            <span class="content"
+              >The RAG systems struggle with key challenges that require effective web
+              traversal.</span
+            >
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- End Experiments -->
+
+  <section class="section" id="Experiments">
+    <div class="container is-max-desktop content">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-fifths">
+          <h2 class="title is-3">🤔️Intrersting Findings</h2>
+          <div class="content has-text-justified">
+          </div>
+          <img src="static/images/scale.jpg" width="70%">
+          <div class="content has-text-justified">
+            <p>
+              The standard RAG system can be viewed as
+a horizontal search for relevant documents in response to a query, while WebWalker can be considered as a vertical exploration approach. WebWalker can seamlessly integrate into standard RAG
+systems to acquire deep information and enhance
+problem-solving capabilities. It is observed that, after the integration, performance has improved across all difficulty
+levels, especially in the multi-source category.
+            </p>
+          </div>
+            <div class="content has-text-justified">
+              <div class="findings-box">
+                <span class="title">Findings (ii):</span>
+                <span class="content"
+                  >WebWalker can be a module in agentic RAG, enabling vertical exploration.</span
+                >
+              </div>
+            </div>
+            <div class="content has-text-justified">
+              <p>
+                We scale up the amount of K ∈ {5, 10, 15, 20, 25}
+to study the impact of scaling during the inference
+phase when tracing source information. Figure 9
+shows the results of scaling up, where larger values of K lead to better performance, validating the
+feasibility of vertical scaling within a certain range.
+              </p>
+            </div>
+              <div class="findings-box">
+                <span class="title">Findings (iii):</span>
+                <span class="content"
+                  >Scaling the process of digging through links could represent a potential direction for vertical exploration in RAG systems.</span
+                >
+              </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">🚩Citation</h2>
+      <pre><code>@article{
+  }
+  </code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
