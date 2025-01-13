@@ -193,9 +193,9 @@
             <p>
               Retrieval-augmented generation (RAG) demonstrates remarkable performance across tasks in open-domain question-answering.
               However, traditional search engines may retrieve shallow content, limiting the ability of LLMs to handle complex, multi-layered information.
-              To address it, we introduce <b>WebWalkerQA</b>, a benchmark designed to assess the ability of LLMs to perform web traversal.
+              To address it, we introduce <b style="color:#615ced;">WebWalkerQA</b>, a benchmark designed to assess the ability of LLMs to perform web traversal.
               It evaluates the capacity of LLMs to traverse a website's subpages to extract high-quality data systematically. 
-              We propose <b>WebWalker</b>, which is a multi-agent framework that mimics human-like web navigation through an explore-critic paradigm.
+              We propose <b style="color:#615ced;">WebWalker</b>, which is a multi-agent framework that mimics human-like web navigation through an explore-critic paradigm.
               Extensive experimental results show that WebWalkerQA is challenging and demonstrates the effectiveness of RAG combined with WebWalker, through the horizontal and vertical integration in real-world scenarios.
             </p>
           </div>
@@ -215,13 +215,13 @@
           <h2 class="title is-3">🌟Overview</h2>
           <div class="content has-text-justified">
             <p>
-              📚 We construct a challenging benchmark, <b>WebWalkerQA</b>, which is composed of 680 queries from four real-world scenarios across over 1373 webpages.
+              📚 We construct a challenging benchmark, <b style="color:#615ced;">WebWalkerQA</b>, which is composed of 680 queries from four real-world scenarios across over 1373 webpages.
             </p>
             <p>
-              🤖 To tackle the challenge of web-navigation tasks requiring long context, we propose <b>WebWalker</b>, which utilizes a multi-agent framework for effective memory management.
+              🤖 To tackle the challenge of web-navigation tasks requiring long context, we propose <b style="color:#615ced;">WebWalker</b>, which utilizes a multi-agent framework for effective memory management.
             </p>
             <p>
-              📊 Extensive experiments show that the WebWalkerQA is challenging, and for informationseeking tasks, <b>vertical exploration</b> within the page proves to be beneficial.
+              📊 Extensive experiments show that the WebWalkerQA is challenging, and for informationseeking tasks, <b style="color:#615ced;">vertical exploration</b> within the page proves to be beneficial.
             </p>
           </div>
         </div>
@@ -238,7 +238,7 @@
           <img src="static/images/dataset.jpg" width="80%">
           <div class="content has-text-justified">
             <p>
-              <b>Data Collection.</b> To make the annotation process cost-efficient and
+              <b style="color:#615ced;">Data Collection.</b> To make the annotation process cost-efficient and
               accurate, we employ a two-stage funnel annotation
               strategy, combining LLM-based and human annotation. In the first stage, GPT-4o,
               performs initial annotations, followed by a second
@@ -249,7 +249,7 @@
           <img src="static/images/sta.jpg" width="80%">
           <div class="content has-text-justified">
             <p>
-              <b>Data Statistics.</b> Through such data construction method with LLM
+              <b style="color:#615ced;">Data Statistics.</b> Through such data construction method with LLM
               and human participation, we obtain 680 questionanswer pairs for WebWalkerQA.
               WebWalkerQA contains two types of data: multi-source and single-source QAs.
               We categorize the questions
@@ -272,10 +272,10 @@
           <img src="static/images/method.jpg" width="80%">
           <div class="content has-text-justified">
             <p>
-              <b>Think then Explore.</b> The explorer agent navigates through a web environment step by step. It interacts with the webpage, focusing on HTML buttons and clickable links to decide where to go next. At each step, the agent observes the current page, which includes the page content and a list of clickable links. Based on this observation, it chooses a link to explore further. The decision-making process considers the sequence of all previous actions and observations, forming a "history" that helps guide the exploration. This process continues until the critic agent decides that enough information has been gathered or a pre-set limit on exploration steps is reached.
+              <b style="color:#615ced;">Think then Explore.</b> The explorer agent navigates through a web environment step by step. It interacts with the webpage, focusing on HTML buttons and clickable links to decide where to go next. At each step, the agent observes the current page, which includes the page content and a list of clickable links. Based on this observation, it chooses a link to explore further. The decision-making process considers the sequence of all previous actions and observations, forming a "history" that helps guide the exploration. This process continues until the critic agent decides that enough information has been gathered or a pre-set limit on exploration steps is reached.
             </p>
             <p>
-              <b>Think then Critique.</b> The critic agent steps in to assess the progress made by the explorer agent. After each exploration step, the critic evaluates the current state, including the query, the latest page observation, and the chosen action. It maintains a memory that is updated incrementally with relevant information gathered so far. The critic decides whether the information collected is sufficient to answer the query. If it is, the critic formulates and provides an answer. If not, the exploration continues. This iterative process ensures that the exploration is purposeful and focused on gathering the necessary information to resolve the query.
+              <b style="color:#615ced;">Think then Critique.</b> The critic agent steps in to assess the progress made by the explorer agent. After each exploration step, the critic evaluates the current state, including the query, the latest page observation, and the chosen action. It maintains a memory that is updated incrementally with relevant information gathered so far. The critic decides whether the information collected is sufficient to answer the query. If it is, the critic formulates and provides an answer. If not, the exploration continues. This iterative process ensures that the exploration is purposeful and focused on gathering the necessary information to resolve the query.
             </p>
           </div>
         </div>
@@ -295,7 +295,7 @@
           <img src="static/images/agent_result.jpg" width="70%">
           <div class="content has-text-justified">
             <p>
-              <b>Results on Agents.</b> The closed-source models outperform
+              <b style="color:#615ced;">Results on Agents.</b> The closed-source models outperform
               the open-source models in both performance and efficiency. For open-source models, performance
               and efficiency improves as the model size increases.
               Our proposed WebWalker framework outperforms
@@ -312,7 +312,7 @@
           <img src="static/images/detail.jpg" width="80%">
           <div class="content has-text-justified">
             <p>
-              <b>Further Analysis.</b> 
+              <b style="color:#615ced;">Further Analysis.</b> 
               The further towards
               the top-right corner, the more effective and prolonged the web traversal becomes. We observe that
               increasing the model size or introducing reflection
@@ -337,7 +337,7 @@
           <img src="static/images/rag_result.jpg" width="60%">
           <div class="content has-text-justified">
             <p>
-              <b>Result on RAG System.</b> We first evaluate the performance under Close
+              <b style="color:#615ced;">Result on RAG System.</b> We first evaluate the performance under Close
               Book settings using the state-of-the-art model OpenAI o1 and Gemini-1.5-Pro without retrieval. We then access the performance of
               several commercial and open-sourced RAG systems.
               Both commercial and open-sourced RAG systems exhibit relatively poor performance on WebWalkerQA, with
@@ -347,7 +347,7 @@
             </p>
           </div>
           <div class="findings-box">
-            <span class="title">Findings (i):</span>
+            <span class="title" style="color:#615ced;">Findings (i):</span>
             <span class="content"
               >The RAG systems struggle with key challenges that require effective web
               traversal.</span
@@ -376,7 +376,7 @@ levels, especially in the multi-source category.
             </p>
             </div>
             <div class="findings-box">
-              <span class="title">Findings (ii):</span>
+              <span class="title" style="color:#615ced;">Findings (ii):</span>
               <span class="content"
                 >WebWalker can be a module in agentic RAG system, enabling vertical exploration.0</span
               >
@@ -391,7 +391,7 @@ feasibility of vertical scaling within a certain range.
             </p>
             </div>
               <div class="findings-box">
-                <span class="title">Findings (iii):</span>
+                <span class="title" style="color:#615ced;">Findings (iii):</span>
                 <span class="content"
                   >Scaling the process of digging through links could represent a potential direction for vertical exploration in RAG systems.</span
                 >
