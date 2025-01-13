@@ -144,11 +144,21 @@
                     <a href="https://www.modelscope.cn/studios/iic/WebWalker" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                          <i class="far fa-gem"></i>
+                        <img src="static/images/modelscope.ico" alt="Modelscope Logo" style="width: 20px; height: 20px;"/>
                       </span>
                       <span>Demo</span>
                       </a>
-                     
+                  </span>
+                    <span class="link-block">
+                      <a href="https://huggingface.co/spaces/callanwu/WebWalker" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <img src="static/images/hf-logo.png" alt="Hugging Face Logo" style="width: 20px; height: 20px;"/>
+                        </span>
+                        <span>Demo</span>
+                        </a>
+                    </span>
+                    
               </div>
             </div>
           </div>
@@ -317,7 +327,8 @@
               in model parameters, provides evidence that this
               phenomenon stems from the interference of long
               contexts having noisy information and the inherent
-              capabilities of the model itself
+              capabilities of the model itself.
+              It can be observed that as the depth increases or the number of sources required increases, the difficulty of acquiring the information needed to resolve the query becomes greater, resulting in a decline in accuracy performance.
             </p>
           </div>
           <img src="static/images/rag_result.jpg" width="60%">
@@ -329,6 +340,7 @@
               Both commercial and open-sourced RAG systems exhibit relatively poor performance on WebWalkerQA, with
               the best result coming from Tongyi, which only
               reaches 40%.
+              Furthermore, as the difficulty increases, the depth of information growing deeper, the performance tends to deteriorate. 
             </p>
           </div>
           <div class="findings-box">
@@ -359,14 +371,13 @@ systems to acquire deep information and enhance
 problem-solving capabilities. It is observed that, after the integration, performance has improved across all difficulty
 levels, especially in the multi-source category.
             </p>
-          </div>
-            <div class="content has-text-justified">
-              <div class="findings-box">
-                <span class="title">Findings (ii):</span>
-                <span class="content"
-                  >WebWalker can be a module in agentic RAG, enabling vertical exploration.</span
-                >
-              </div>
+            </div>
+            <div class="findings-box">
+              <span class="title">Findings (i):</span>
+              <span class="content"
+                >The RAG systems struggle with key challenges that require effective web
+                traversal.</span
+              >
             </div>
             <div class="content has-text-justified">
               <p>
@@ -375,7 +386,7 @@ to study the impact of scaling during the inference
 phase when tracing source information. Figure 9
 shows the results of scaling up, where larger values of K lead to better performance, validating the
 feasibility of vertical scaling within a certain range.
-              </p>
+            </p>
             </div>
               <div class="findings-box">
                 <span class="title">Findings (iii):</span>
